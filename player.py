@@ -11,14 +11,14 @@ class Player(py.sprite.Sprite):
         self.attack = 10
         self.velocity = 5
         self.all_projectiles = py.sprite.Group()
+        self.all_projectiles.add(Projectile())
         self.image = py.image.load('assets/player.png')
         self.rect = self.image.get_rect()
         self.rect.x = 400
         self.rect.y = 500
     
-    def launch_projectile(self):
-        #new Projectile     
-        self.all_projectiles.add(Projectile())
+
+    
 
     def move_right(self):
         self.rect.x += self.velocity
